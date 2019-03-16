@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> uti fetch</title>
+<head>
+<body>
+<script>
+apikey = "ZbzZIH8dLFc-rwqX4h74sXCBdYKzcr9Hp6o9wL4OcY"
+	address = "http://api.txtlocal.com/send/?"
+	message = "This is your message"
+	message = encodeURI(message)
+	numbers = "00213559900256"
+	sender = "moh ramdane"
+	url = address & "apikey=" & apikey & "&numbers=" & numbers & "&message=" & message & "&sender=" & sender;
+	
+	fetch(url).then(function(respons){console.log(respons)})
+</script>
+<body>
+
+
+</html>

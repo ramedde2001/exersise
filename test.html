@@ -3,16 +3,26 @@
 <title> uti fetch</title>
 <head>
 <body>
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
 <script>
-apikey = "ZbzZIH8dLFc-rwqX4h74sXCBdYKzcr9Hp6o9wL4OcY"
-	address = "http://api.txtlocal.com/send/?"
-	message = "This is your message"
-	message = encodeURI(message)
-	numbers = "00213559900256"
-	sender = "moh ramdane"
-	url = address & "apikey=" & apikey & "&numbers=" & numbers & "&message=" & message & "&sender=" & sender;
-	
-	fetch(url).then(function(respons){console.log(respons)})
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAHKvN2Uw7Y6LCsF-KqsXbqNYAfvo-yW3A",
+    authDomain: "myproje-4a2e2.firebaseapp.com",
+    databaseURL: "https://myproje-4a2e2.firebaseio.com",
+    projectId: "myproje-4a2e2",
+    storageBucket: "myproje-4a2e2.appspot.com",
+    messagingSenderId: "913698461417"
+  };
+  firebase.initializeApp(config);
+  var database = firebase.database();
+   var ref =database.ref("users/")
+   var data={name:"mohamed",score:1}
+   ref.push(data);
+   console.log(ref);
+</script>
+<script>
+
 </script>
 <body>
 
